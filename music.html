@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<!--Set the title of the page-->
+	<title>Music</title>
+
+	<!--Loads both the constant style sheets and any styles unique to the music page-->
+	<link rel="stylesheet" type="text/css" href="CSS/constantStyles.css">
+	<link rel="stylesheet" type="text/css" href="CSS/musicStyles.css">
+
+	<!--Link to external web fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	<!--Load the jQuery and FileReader libraries, as well as constant scripts and
+	the customiser-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<script src="JS/constantJS.js"></script>
+	<script src="JS/musicJS.js"></script>
+</head>
+
+<body>
+	<header>
+		<!--This symbol will be used to open the side-menu when the site is viewed on a mobile site-->
+		<h2 id="open">☰</h2>
+
+			<!--Navigation bar that provides links to the band's social media pages. Will appear at top of page-->
+			<nav class="navbar" id="top">
+				<ul>
+					<li><a href="https://open.spotify.com/artist/6hWReUQlQwLTYlmZ1vltRB">Spotify</a></li>
+					<li><a href="https://www.facebook.com/KNOmusicUK/">Facebook</a></li>
+					<li><a href="https://twitter.com/KNOmusicUK?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a></li>
+					<li><a href="https://www.instagram.com/knomusicuk/">Instagram</a></li>
+					<li><a href="https://www.youtube.com/channel/UCgjVcEB3-OOL94BDV9VC0Nw">YouTube</a></li>
+				</ul>
+			</nav>
+	</header>
+
+	<section class="content main">
+		<!--Music video for the single is loaded into the page-->
+		<div>
+			<video poster="Assets/systematic.png" controls>
+				<source src="Assets/systematic.mp4" type="video/mp4">
+			</video>
+
+			<!--This section contains links to purchase the band's new single-->
+			<ul class="purchaseList">
+				<li><a href="https://geo.itunes.apple.com/gb/album/systematic/1267396829?i=1267396835&mt=1&app=music"><img src="Assets/appleLogo.svg" alt="Apple Music Logo"></a></li>
+				<li><a href="https://play.google.com/store/music/album/King_No_One_Systematic?id=Bqno6uvvcrc6jglhft34fgs7vwm&hl=en_GB"><img src="Assets/googlePlayLogo.png" alt="Google Play Logo"></a></li>
+				<li><a href="https://soundcloud.com/knomusicuk/systematic"><img src="Assets/soundCloudLogo.png" alt="SoundCloud Logo"></a></li>
+			</ul>
+		</div>
+
+		<div class="contentDiv">
+				<!--Displays a header with the single's name-->
+				<h2>Systematic: The New Single from King No-One</h2>
+
+				<!--Short review of the single displayed within a paragraph-->
+				<p>The song begins with a catchy bass rhythm followed by the introduction of synth sounds. The simple drum beat accompanies the bass perfectly and the tune is enhanced further by the addition of upbeat guitar riffs whilst singer Zach Lount displays an impressive vocal range. By incorporating an Arctic Monkeys-esque bass line, the song has been given a slight funk feel to it.</p>
+		</div>
+	</section>
+
+	<!--Displays two parts of the page that will be used to allow a user to
+	navigate to interactive content such as the customiser and Spotify API-->
+	<section class="content" id="interactionLinks">
+        <div class="column" id="customiserColumn">
+			<a href="customiser.html">
+				<figure>
+					<p>Album Creator</p>
+					<img id="customiserLink" src="Assets/musicPage1.jpg" alt="Customiser Image">
+				</figure>
+			</a>
+        </div>
+
+        <div class="column" id="spotifyColumn">
+			<a href="spotify.html">
+				<figure>
+					<p>Spotify Player</p>
+					<img id="spotifyLink" src="Assets/musicPage2.jpg" alt="Spotify API Image">
+				</figure>
+			</a>
+        </div>
+	</section>
+
+	<!--Navbar that contains links to other pages of the website, placed at the bottom of the page within the footer-->
+  <footer class = "navbar" id="bottom">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="tourDates.html">Tour</a></li>
+					<li><a href="music.html">Music</a></li>
+					<li><a href="video.html">Video</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="criticalLog.html">Critical Log</a></li>
+					<li><a href="demo.html">Demo</a></li>
+				</ul>
+			</nav>
+  </footer>
+</body>
+</html>

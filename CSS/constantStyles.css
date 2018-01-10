@@ -1,0 +1,213 @@
+/*For resetting all CSS preset styles */
+html, body, div,
+ span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, video,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, section{
+	/*Forces objects to be vertically aligned with the baseline of their parent elements*/
+	vertical-align:baseline;
+	/*Removes all padding, margins, and borders that may be set up automatically by a browser */
+	margin:0;
+	padding:0;
+	border:0;
+	/*Sets the default font size to 100% of the browser's automatic size, usually 16px */
+	font-size:14px;
+	font:inherit;
+}
+
+body{
+	/*Creates a radial gradient that fills the whole of the page's background, using a single colour as a default */
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-color:#442544;
+	
+	-webkit- background-image:radial-gradient(ellipse farthest-corner at right bottom, #442544 0%, #9F394B 100%);
+	-o- background-image:radial-gradient(ellipse farthest-corner at right bottom, #442544 0%, #9F394B 100%);
+	-moz- background-image:radial-gradient(ellipse farthest-corner at right bottom, #442544 0%, #9F394B 100%);
+	-ms- background-image:radial-gradient(ellipse farthest-corner at right bottom, #442544 0%, #9F394B 100%);
+	background-image:radial-gradient(ellipse farthest-corner at right bottom, #442544 0%, #9F394B 100%);
+	background-size:100vw;
+	/*Hides horizontal excess, whilst allowing for vertical scroll */
+	overflow-y:scroll;
+	overflow-x:hidden;
+	/*Uses Google Fonts to set the default font and font colour */
+	font-family:"Questrial", sans-serif;
+	color:white;
+	/*Adds a margin to the bottom of the page so that the footer does not cover content */
+	margin-bottom:5rem;
+}
+
+.navbar {
+	/*Sets both navigation bars background colours, enables them to fill the entire width of a display, and sets the relative height of them */
+	background-color:#0c0c0c;
+	width:100vw;
+	height:auto;
+	/*Centre-alligns text and sets all to uppercase to maintain consistency */
+	text-align:center;
+	text-transform:uppercase;
+}
+
+/*Enables each list element and the link contained within them to be displayed in a horizontal line, with padding to seperate list elements*/
+.navbar li{
+	display:inline-block;
+	vertical-align:middle;
+	margin:1em;
+}
+
+.navbar .close{
+	display:none;
+}
+
+#open{
+	display:none;
+}
+
+/*Removes link decoration within the navbar such as underlining and highlighting, and sets the duration for any transitions that may occur*/
+.navbar a{
+	transition-duration:0.5s;
+	text-decoration:none;
+	color:white;
+}
+
+/*Changes the colour of links to maroon when hovered over */
+.navbar a:hover{
+	color:#9F394B;
+}
+
+/*Darkens the link colour when pressed */
+.navbar a:active{
+	color:#442544;
+}
+
+/*Forces only the top navigation bar to stay at the top of the page in an absolute manner */
+#top{
+  position:relative;
+  z-index:2;
+  top:0;
+}
+
+/*Forces only the bottom navigation bar to stay at the bottom of the screen visible to the user, so that it is always accessible */
+#bottom{
+  position:fixed;
+  bottom:0;
+}
+
+.content{
+	/*Displays the main content of the page in a block format, centering each element*/
+	display:block;
+	float:center;
+	width:90vw;
+	height:auto;
+	/*Sets the standard text colour to be white, whilst using Google Fonts to set the default font*/
+	color:white;
+	text-align:center;
+	font-family:"Raleway", sans-serif;
+}
+
+.content h2{
+	/*Sets the font size of headings to be twice the default font size, capitalising and adding padding*/
+	font-size:2rem;
+	text-transform:uppercase;
+	padding-bottom:2rem;
+}
+
+.content a{
+	/*Remove any underlining and highlighting from links*/
+	color:white;
+	text-decoration:none;
+}
+
+/*There are three divs on the index page that will have darkened backgrounds to
+make them easier to read. Their overflow is hidden, and sufficient padding and
+margins are applied. The corners of each div are rounded slightly
+*/
+.contentDiv{
+	position:relative;
+	display:block;
+    box-sizing:border-box;
+    width:80vw;
+	overflow:hidden;
+	background-color:#0c0c0c;
+	padding:3rem;
+	margin-left:10vw;
+	margin-right:10vw;
+	margin-top:3rem;
+	margin-bottom:3rem;
+	border-radius:5px;
+}
+
+.highlightDiv{
+	transition-duration:0.5s;
+}
+
+/*The background colour of the element changes to a lighter grey when hovered
+over, and corners become slightly more rounded
+*/
+.highlightDiv:hover{
+	background-color:#222222;
+	border-radius:10px;
+}
+
+/* Mobile site only*/
+@media only screen and (max-width:599px){
+    #open{
+		/* The menu icon will be visible in the top left corner of the display*/
+        position:relative;
+        display:inline-block;
+        z-index:3;
+	    cursor:pointer;
+	    width:30px;
+	    height:auto;
+	    padding:1rem;
+	    float:left;
+        color:white;
+	    transition-duration:0.5s;
+    }
+
+	/* The top and bottom navigation bars are hidden*/
+    #top{
+        display:none;
+    }
+
+    #bottom{
+        display:none;
+    }
+	
+	/* The mobile navigation bar is given a width of 0px until it is clicked, and will expand in 0.5 seconds*/
+    .navbar{
+		height:100%;
+		width:0px;
+		position:fixed;
+		z-index:1;
+		overflow-x:hidden;
+		transition:0.5s;
+	}
+
+	/* The padding around each menu item is increased*/
+    .navbar ul{
+        padding-top:3rem;
+    }
+
+	/* List items are displayed one per line*/
+	.navbar li{
+		display:block;
+	}
+	
+	/* Content divs will fill the screen and lose their rounded corners*/
+    .contentDiv{
+        width:100vw;
+        margin-left:0;
+        margin-right:0;
+        margin-top:1rem;
+        margin-bottom:1rem;
+        border-radius:0px;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Tour</title>
+
+	<!--Link the page to both the stie's constant styles and page-specific styles-->
+	<link rel="stylesheet" type="text/css" href="CSS/constantStyles.css">
+	<link rel="stylesheet" type="text/css" href="CSS/tourStyles.css">
+	<!--Link to external web fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	<!--Load the jQuery library, BandsInTown, and constant JavaScript files-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<script src="https://widget.bandsintown.com/main.min.js"></script>
+	<script src="JS/constantJS.js"></script>
+</head>
+
+<body>
+	<header>
+		<!--This symbol will be used to open the side-menu when the site is viewed on a mobile site-->
+		<h2 id="open">☰</h2>
+		<!--Navigation bar that provides links to the band's social media pages. Will appear at top of page-->
+		<nav class="navbar" id="top">
+			<ul>
+				<li><a href="https://open.spotify.com/artist/6hWReUQlQwLTYlmZ1vltRB">Spotify</a></li>
+				<li><a href="https://www.facebook.com/KNOmusicUK/">Facebook</a></li>
+				<li><a href="https://twitter.com/KNOmusicUK?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a></li>
+				<li><a href="https://www.instagram.com/knomusicuk/">Instagram</a></li>
+				<li><a href="https://www.youtube.com/channel/UCgjVcEB3-OOL94BDV9VC0Nw">YouTube</a></li>
+			</ul>
+		</nav>
+	</header>
+
+		<!--This section contains the BandsInTown widget, using global data attributes to stylise the widget.
+		The widget will display tour dates for King No-One, and applies appropriate text and background colours-->
+		<section id="tour">
+			<a class="bit-widget-initializer" data-artist-name="King No-One" data-display-local-dates="true"
+			data-display-past-dates="true" data-auto-style="false" data-text-color="#FFFFFF" data-link-color="#FFFFFF"
+		  data-popup-background-color="rgba(0,0,0,0)" data-background-color="rgba(0,0,0,0)" data-display-limit="15"
+			data-link-text-color="#000000"></a>
+		</section>
+
+	<!--Navbar that contains links to other pages of the website, placed at the bottom of the page within the footer-->
+	<footer class = "navbar" id="bottom">
+		<section>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="tourDates.html">Tour</a></li>
+					<li><a href="music.html">Music</a></li>
+					<li><a href="video.html">Video</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="criticalLog.html">Critical Log</a></li>
+					<li><a href="demo.html">Demo</a></li>
+				</ul>
+			</nav>
+		</section>
+	</footer>
+</body>
+</html>

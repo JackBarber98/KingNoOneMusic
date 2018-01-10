@@ -1,0 +1,59 @@
+/* Desktop site only*/
+
+@media only screen and (min-width:600px){
+	
+	/* The flexbox structure is set up, and each box within it is centered. The flexbox also fills the width of the screen */
+	.flexbox{
+		position:relative;
+		display:-webkit-flex;
+		display:-o-flex;
+		display:-moz-flex;
+		display:-ms-flexbox;
+		display:flex;
+		flex-flow:row wrap;
+		box-align:center;
+		box-pack:center;
+		align-items:center;
+		justify-content:center;
+		width:100vw;
+	}
+
+	/* Each box is classed as a 'contentDiv', but the standard margins are reduced and objects are vertically centered 
+	using the transform rule*/
+	.contentDiv{
+		object-fit:contain;
+		width:24%;
+		height:24%;
+		margin:1%;
+		cursor:pointer;
+		top: 50%;
+		-webkit- transform:translateY(50%);
+		-o- transform:translateY(50%);
+		-moz- transform:translateY(50%);
+		-ms- transform:translateY(50%);
+		transform:translateY(50%);
+	}
+	
+	/* When a box is hovered over, the box will be rotated 10deg in the y-axis*/
+	.contentDiv:hover{
+		-webkit- transform:rotateY(10deg);
+		-o- transform:rotateY(10deg);
+		-moz- transform:rotateY(10deg);
+		-ms- transform:rotateY(10deg);
+		transform:rotateY(10deg);
+	}
+}
+
+/* Mobile site only*/
+@media only screen and (max-width:599px) {
+	
+	/* The flexbox nature of the boxes is removed, and inline-block display replaces it*/
+	.flexbox{
+		display:inline-block;
+	}
+	
+	/* Each box fills the width of the screen*/
+	.contentDiv{
+		width:100vw;
+	}
+}

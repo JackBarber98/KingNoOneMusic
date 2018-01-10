@@ -1,0 +1,18 @@
+
+/* Hides any overflowing parts of the page, removing the scroll bar*/
+.body{
+	overflow-y:hidden;
+}
+
+/* The widget is centered on-screen*/
+section{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* The widget's margin is set and will fill its container*/
+#spotifyPlayer{
+	width:100%;
+	margin-top:1rem;
+}

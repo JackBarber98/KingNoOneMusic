@@ -1,0 +1,12 @@
+/* Centre the video container*/
+section{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* Centre the iframe containing the YouTube video*/
+iframe{
+	position:relative;
+	display:inline-block;
+	float:center;
+}

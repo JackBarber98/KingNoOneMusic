@@ -1,0 +1,133 @@
+/*Centers the logo and ensures that the image is the only thing shown on
+that 'line' of the website. Also sets padding to 3 rem so that there is
+clearance between the navigation bar and the logo
+*/
+#logo{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	padding:3rem;
+	width:20%;
+	height:auto;
+}
+
+/*Resizes the slideshow container so that at most it will fill 60% of the
+screen height when viewed on a desktop. Also prevents the user from interacting
+with the slideshow to make the home screen appear minimalistic
+*/
+#quoteSlideshow{
+	margin:0;
+    width:100vw;
+	height:60vh;
+	pointer-events:none;
+	top:50%;
+	transform:translateY(-50%);
+}
+
+/*Moves slideshow text down the screen slightly */
+#quoteSlideshow p{
+    margin-top:25vh;
+}
+
+/*Enlarges the font size of each quote and makes each one uppercase. Also
+applies padding so that the quote is sufficiently separated from the source
+*/
+.quote{
+    position:relative;
+    margin-top:25vh;
+    margin-bottom:auto;
+	font-size:3rem;
+	padding:2rem;
+	text-transform:uppercase;
+}
+
+/*Makes the source text larger than standard text, but smaller than the quote
+itself
+*/
+.source{
+	font-size:2rem;
+}
+
+/*The background colour of the image slideshow is darkened, centered, and
+given an automatic height based on the dimensions of the slideshow itself
+(shown later in more detail)
+*/
+#imageSlideshow{
+	background-color:#0c0c0c;
+	display:block;
+	position:relative;
+	float:center;
+	height:auto;
+}
+
+/*The transition time from the div being black to grey is set to 0.5 seconds */
+#single{
+	transition-duration:0.5s;
+}
+
+/*The image displayed within the 'single' div is set to a fixed width of 200
+pixels
+*/
+#singleLink img{
+	width:200px;
+	height:auto;
+}
+
+
+/*Each item contained within the slideshow is set to fill 100% of the width
+of its containing element
+*/
+.slick-slide img {
+	width:100%;
+}
+
+/*Items that are not currently at the 'center' of the slideshow are made less
+opaque
+*/
+.slick-slide {
+	transition:all ease-in-out.3s;
+  opacity:0.2;
+}
+
+/*Items are set to 0.5 opacity when fading in or out of the 'center' of the
+slideshow
+*/
+.slick-active {
+	opacity:0.5;
+}
+
+/*The item currently at the 'center' of the slideshow is made opaque */
+.slick-current {
+	opacity:1;
+}
+
+/*The following CSS is built for mobile use of the website. When the width of
+the browser is less than 600px, the following styles will be applied
+*/
+@media only screen and (max-width:599px){
+	/* The logo is made slightly larger relative to the web page, and is given a
+	'sticky' position rather than relative
+	 */
+	#logo{
+		position:sticky;
+		width:25%;
+		top:0;
+	}
+
+	/*The height of the quote slideshow is set to fill the remaining space of the 
+	container, preventing overlapping with the image slideshow */
+	#quoteSlideshow{
+		top:30vh;
+		padding-bottom:100%;
+	}
+
+	/*The font sizes of both quote text and source text is reduced so that there
+	are fewer line breaks */
+	.quote{
+		font-size:2rem;
+	}
+
+	.source{
+		font-size:1rem;
+	}
+}

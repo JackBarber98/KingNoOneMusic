@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<!--Set the title of the page-->
+	<title>Video</title>
+	
+	<!--Loads both the constant style sheets and any styles unique to the video page-->
+	<link rel="stylesheet" type="text/css" href="CSS/constantStyles.css">
+	<link rel="stylesheet" type="text/css" href="CSS/videoStyles.css">
+	
+	<!--Links to external webfonts using the Google Fonts API-->
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	<!--Loads in the jQuery library-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	
+	<!--Loads page specific and global JavaScript files-->
+	<script src="JS/constantJS.js"></script>
+    <script src="JS/videoJS.js"></script>
+</head>
+
+<body>
+	<header>
+	
+		<!--This symbol will be used to open the side-menu when the site is viewed on a mobile site-->
+		<h2 id="open">☰</h2>
+		
+		<!--Navigation bar that provides links to the band's social media pages. Will appear at top of page-->
+		<nav class="navbar" id="top">
+			<ul>
+				<li><a href="https://open.spotify.com/artist/6hWReUQlQwLTYlmZ1vltRB">Spotify</a></li>
+				<li><a href="https://www.facebook.com/KNOmusicUK/">Facebook</a></li>
+				<li><a href="https://twitter.com/KNOmusicUK?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a></li>
+				<li><a href="https://www.instagram.com/knomusicuk/">Instagram</a></li>
+				<li><a href="https://www.youtube.com/channel/UCgjVcEB3-OOL94BDV9VC0Nw">YouTube</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<!--Section displays a large video, and displays a warning message if HTML5 video is not supported-->
+	<section class="videoContainer">
+			<video class="mainVideo" id ="systematic" poster="Assets/systematic.png" alt="Systematic" controls>
+  			<source src="Assets/systematic.mp4" type="video/mp4">
+  			Your browser does not support HTML5 video.
+			</video>
+	</section>
+
+	<!--Section contains figures, each of which display a thumbnail linking to another video-->
+	<section class="thumbContainer">
+	
+		<!--Each thumbnail is stored within a figure so that a caption can be displayed alongside the image-->
+        <figure class="videoThumbs">
+            <img id="twoIslands" src="Assets/twoIslands.png" alt="Two Islands">
+        </figure>
+
+        <figure class="videoThumbs">
+            <img id="antichrist" src="Assets/antichrist.png" alt="Antichrist">
+        </figure>
+
+        <figure class="videoThumbs">
+            <img id="alcatraz" src="Assets/alcatraz.png" alt="Alcatraz">
+        </figure>
+
+        <figure class="videoThumbs">
+            <img id="halo" src="Assets/halo.png" alt="Halo">
+        </figure>
+
+        <figure class="videoThumbs">
+            <img id="constellations" src="Assets/constellations.png" alt="Constellations">
+        </figure>
+
+        <figure class="videoThumbs">
+            <img id="foreignTongue" src="Assets/foreignTongue.png" alt="Foreign Tongue">
+        </figure>
+
+        <figure class="videoThumbs">
+            <img id="stayClose" src="Assets/stayClose.png" alt="Stay Close">
+        </figure>
+	</section>
+
+	<!--Navbar that contains links to other pages of the website, placed at the bottom of the page within the footer-->
+	<footer class = "navbar" id="bottom">
+		<section>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="tourDates.html">Tour</a></li>
+					<li><a href="music.html">Music</a></li>
+					<li><a href="video.html">Video</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="criticalLog.html">Critical Log</a></li>
+					<li><a href="demo.html">Demo</a></li>
+				</ul>
+			</nav>
+		</section>
+	</footer>
+</body>
+</html>

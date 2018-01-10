@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!--Set the title of the page-->
+	<title>Home</title>
+
+	<!--Loads both the constant style sheets and any styles unique to the home page-->
+	<link rel="stylesheet" type="text/css" href="CSS/constantStyles.css">
+	<link rel="stylesheet" type="text/css" href="CSS/homeStyles.css">
+
+	<!--Loads style sheets for the Slick library-->
+	<link rel="stylesheet" type="text/css" href="slick-1.8.0/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="slick-1.8.0/slick/slick-theme.css">
+
+	<!--Links to external webfonts using the Google Fonts API-->
+	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	<!--Loads in the jQuery library-->
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	
+	<!--Loads the Slick.js library, Twitter widget JavaScript, and the Bandsintown widget JavaScript-->
+	<script src="slick-1.8.0/slick.js"></script>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
+
+	<!--Loads home-page specific and global JavaScript files-->
+	<script src="JS/homeJS.js"></script>
+	<script src="JS/constantJS.js"></script>
+</head>
+
+<body>
+	<header>
+	
+		<!--This symbol will be used to open the side-menu when the site is viewed on a mobile site-->
+		<h2 id="open">☰</h2>
+		
+		<!--Navigation bar that provides links to the band's social media pages. Will appear at top of page-->
+		<nav class="navbar" id="top">
+			<ul>
+				<li><a href="https://open.spotify.com/artist/6hWReUQlQwLTYlmZ1vltRB">Spotify</a></li>
+				<li><a href="https://www.facebook.com/KNOmusicUK/">Facebook</a></li>
+				<li><a href="https://twitter.com/KNOmusicUK?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a></li>
+				<li><a href="https://www.instagram.com/knomusicuk/">Instagram</a></li>
+				<li><a href="https://www.youtube.com/channel/UCgjVcEB3-OOL94BDV9VC0Nw">YouTube</a></li>
+			</ul>
+		</nav>
+
+		<!--Displays the band's logo-->
+		<figure>
+			<img id="logo" src="Assets/logotransparent.png" alt="King No-One Logo">
+		</figure>
+	</header>
+
+	<!--This section is used as a container for a text-based slideshow of quotes, controlled using the Slick.js library-->
+	<section class="content" id="quoteSlideshow">
+            <p class="source"><q class="quote">Fizzing hooks, buoyant energy, and tonnes of charm</q><br> - Clash Magazine</p>
+		    <p class="source"><q class="quote">Their songs provide infectious choruses and wonderful catchy guitar riffs</q><br> - Quays News</p>
+		    <p class="source"><q class="quote">Will make you nostalgic for a place you've never been</q><br> - IndieCentralMusic.com</p>
+		    <p class="source"><q class="quote">Selling out red hot show after red hot show</q><br> - Clash Magazine</p>
+		    <p class="source"><q class="quote">One of the most successful unsigned bands of their genre</q><br> - TMRW</p>
+        
+	</section>
+
+	<!--Section is used as a container for a Slick.js image slideshow-->
+	<section id="imageSlideshow">
+		<figure>
+			<img src="Assets/slideshowimg1.jpg" alt="Image 1">
+		</figure>
+		<figure>
+			<img src="Assets/slideshowimg2.jpg" alt="Image 2">
+		</figure>
+		<figure>
+			<img src="Assets/slideshowimg3.jpg" alt="Image 3">
+		</figure>
+	</section>
+
+	<section class="content">
+		<!--This div contains the 'about' section of the site-->
+		<div class="contentDiv">
+			<h2>About</h2>
+			<p>King No-One have been conquering the stage, gaining bigger and bigger audiences with each show and blowing away
+				crowds across the UK with their explosive live performances. The band have played packed-to-the-rafter shows at
+				festivals such as Reading and Leeds, The Great Escape (BBC Introducing Showcase), Live At Leeds, Dot-To-Dot and a
+				headlining Club NME show at the iconic KOKO in Camden.</p><br><p>
+				Having sold out their third UK headline tour in March / April, King No-One will be back on the road this Autumn,
+				due to fan demand.
+Making an undeniable mark as one of the most exciting, ‘must see’ bands for 2017, King No-One are set to be exploding across
+the musical landscape again this year. There doesn't seem to be enough of them to go around. Even though the band don't write
+ the kind of music that you can lose your head to, they do write the kind of music that is easy to get lost in.</p>
+			<br>
+		</div>
+
+		<!--The whole div is a link to the 'music' page of the site, and displays information about the band's latest single-->
+		<a href="music.html">
+			<div class="contentDiv highlightDiv" id="singleLink">
+				<h2>Systematic</h2>
+				<p>Listen to King No-One's latest single, "Systematic", here</p>
+				<img src="Assets/systematicArt.png" alt="Systematic Artwork">
+				<p><q>A catchy bass rhythm followed by the introduction of synth sounds</q> - IndieMusicCentral</p>
+			</div>
+		</a>
+
+		<!--Div contains the Twitter timeline widget to display the band's twitter feed. This uses an externally-hosted JavaSCript file-->
+		<div class="contentDiv" id="social">
+			<h2>Social Media</h2>
+			<a class="twitter-timeline" data-chrome="nofooter noborders transparent noheader" data-height="500" data-width="1000" 
+			data-theme="dark" href="https://twitter.com/KNOmusicUK?ref_src=twsrc%5Etfw">Tweets by KNOmusicUK</a>
+		</div>
+	</section>
+
+	<!--Navbar that contains links to other pages of the website, placed at the bottom of the page within the footer-->
+	<footer class = "navbar" id="bottom">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="tourDates.html">Tour</a></li>
+					<li><a href="music.html">Music</a></li>
+					<li><a href="video.html">Video</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="criticalLog.html">Critical Log</a></li>
+					<li><a href="demo.html">Demo</a></li>					
+				</ul>
+			</nav>
+	</footer>
+</body>
+</html>

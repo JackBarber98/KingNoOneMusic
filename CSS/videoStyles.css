@@ -1,0 +1,51 @@
+/* The main video fills 100% of the screen's width */
+video{
+  width:100vw;
+  height:auto;
+}
+
+/* The container for video thumbnails is a flexbox, and is centered on-screen */
+.thumbContainer{
+    position:relative;
+    display:flex;
+    flex-flow:row wrap;
+    align-items:center;
+    justify-content:center;
+    width:100vw;
+}
+
+/* Each figure fills 30% the width of its container, and each has a margin of 2rem. 
+Cursor changes to pointer when hovering over figures */
+figure{
+	transition-duration:0.2s;
+    object-fit:contain;
+    width:30%;
+    margin:2rem;
+    cursor:pointer;
+}
+
+/* Each image fills 100% the width of its figure container*/
+figure img{
+    width:100%;
+}
+
+/* When a figure is hovered hover, it will rotate slightly, creating a 3D effect */
+figure:hover{
+	transform:rotateY(20deg) rotateX(5deg);
+}
+
+/* Mobile site only */
+@media only screen and (max-width:599px) {
+	/* Thumbnails are shown in a single column, filling 80% of the width of the screen*/
+    .thumbContainer{
+        display:block;
+    }
+
+    .thumbContainer figure{
+        display:block;
+        width:80vw;
+        margin-left:auto;
+        margin-right:auto;
+        padding-bottom:1rem;
+    }
+}

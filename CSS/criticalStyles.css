@@ -1,0 +1,9 @@
+/* Set the maximum image width to be 60% of the viewport width to prevent overflow*/
+img{
+	max-width:60vw;
+}
+
+/*Align bibliography list elements to the left, making it easier to read */
+#bibliography li{
+	text-align:left;
+}

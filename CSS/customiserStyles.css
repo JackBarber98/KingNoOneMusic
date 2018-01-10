@@ -1,0 +1,53 @@
+/* All canvasses on this page are inline-block elements with an absolute position */
+canvas{
+	display:inline-block;
+    position:absolute;	
+}
+
+/* The container for the canvasses and form is centered on the page */
+#customiserContainer{
+	display:block;
+	position:relative;
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* The customiser display is centered within the container, and is given a height and width of 600 pixels */
+#canvasContainer{
+	display:block;
+	position:relative;
+	width:600px;
+	height:600px;
+	top:2rem;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* The background canvas is positioned in the top left corner of the container */
+#backgroundCanvas{
+	top:0px;
+	left:0;
+	width:100%;
+	z-index:-3;
+}
+
+/* The album image canvas is slightly indented from the top and bottom of the container */
+#imageCanvas{
+	top:25px;
+	left:25px;
+	z-index:-2;
+}
+
+/* The album title canvas is slightly indented from the top and bottom of the container */
+#textCanvas{
+	top:2px;
+	left:25px;
+	z-index:-1;
+}
+
+/* The div containing the controls for the customiser are centered */
+.contentDiv{
+	margin-left:auto;
+	margin-right:auto;
+}

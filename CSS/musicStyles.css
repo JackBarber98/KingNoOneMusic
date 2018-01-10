@@ -1,0 +1,83 @@
+/* The width of the video is set to 100% of the screen's width */
+video{
+  width:100vw;
+  height:auto;
+}
+
+/* The list containing links to listen to the single fills 100% of the screen's width */
+.purchaseList{
+    width:100vw;
+}
+
+/* Each item in the list is horizontally aligned and displayed inline */
+.purchaseList li{
+  position:relative;
+  display:inline-block;
+  vertical-align:middle;
+  padding-top:2rem;
+}
+
+/* The width of each image is fixed at 50 pixels, with 1rem of padding around each */
+.purchaseList img{
+  width:50px;
+  padding:1rem;
+}
+
+/* The container for the links to the customiser and Spotify web player fills the width of the screen */
+#interactionLinks{
+    width:100vw;
+	height:auto;
+}
+
+/* Each column is set to fill 50% of the screen's width, with overflow hidden to keep images the same size */
+.column{
+    display:inline-block;
+    float:left;
+    width:50vw;
+    height:auto;
+    overflow:hidden;
+	text-align:center;
+}
+
+/* The text above each image link is centered, given a dark grey background, and together fill 100% of the width of 
+their container */
+.column p{
+    display:inline-block;
+    position:relative;
+	background-color:#0c0c0c;
+	text-transform:uppercase;
+	width:100%;
+	float:center;
+}
+
+/* Both images in the two columns fill 100% of the width of their container, so each take up 50% of the screen's width */
+.column img{
+    width:100%;
+    height:auto;
+}
+
+/* When an image in the column is hovered over, the cursor changes to a pointer */
+.column img:hover{
+	cursor:pointer:
+}
+
+/* The second column will appear on the right side of the screen */
+#spotifyColumn{
+  position:relative;
+  float:right;
+}
+
+/* Mobile site only */
+@media only screen and (max-width:599px){
+	
+	/* Each column and image fills 100% of the screen's width, so the images are stacked */
+	.column{
+		display:block;
+		width:100vw;
+		float:center;
+	}
+	
+	.column img{
+		width:100vw;
+	}
+}

@@ -1,0 +1,10 @@
+/*Centre-positions the widget, ensuring that it always fills 90% of the
+viewport width
+*/
+#tour{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1rem;
+	width:90vw;
+}
